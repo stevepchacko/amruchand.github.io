@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amruth Chand</title>
+</head>
+
+<body>
+
+  <div>
+  Redirecting in <span id="timer">#</span>
+  </div>
+
+  <script type="text/javascript">
+    tm = document.getElementById("timer")
+    var i = 3, id;
+
+    tm.innerHTML = i;
+
+    function redirect() {
+      window.location = "https://instagram.com/amruchand";
+    }
+
+    function countdown() {
+      i--;
+      tm.innerHTML = i;
+
+      if (i <= 0) {
+        window.clearInterval(id);
+        redirect();
+      }
+    }
+
+    id = setInterval(countdown, 1000);
+  </script>
+
+</body>
+
+</html>
